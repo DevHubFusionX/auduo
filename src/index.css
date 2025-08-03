@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+/* Custom CSS Variables for Color Scheme */
+:root {
+  --sand: #d9c9a0;
+  --earth: #4a3f35;
+  --cream: #fff7ea;
+  --brown: #7b5e3d;
+  --gold: #d4af37;
+  --warm-white: #fefcf8;
+}
+
+/* Custom styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--warm-white);
+  color: var(--earth);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+/* Custom hover effects */
+.hover-scale {
+  transition: all 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(75, 63, 53, 0.2);
+}
+
+/* Custom gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--earth) 50%, var(--sand) 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
+}
+
+/* Custom shadows */
+.shadow-warm {
+  box-shadow: 0 10px 25px -5px rgba(75, 63, 53, 0.15), 0 10px 10px -5px rgba(75, 63, 53, 0.08);
+}
+
+.shadow-gold {
+  box-shadow: 0 8px 25px -5px rgba(212, 175, 55, 0.3);
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--earth) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--earth) 0%, var(--brown) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(75, 63, 53, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--gold) 0%, #e6c547 100%);
+  color: var(--earth);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #e6c547 0%, var(--gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+}
+
+/* Typography */
+.heading-primary {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--earth);
+}
+
+.heading-secondary {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.text-warm {
+  color: var(--brown);
+}
+
+.text-earth {
+  color: var(--earth);
+}
+
+.bg-sand {
+  background-color: var(--sand);
+}
+
+.bg-earth {
+  background-color: var(--earth);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-warm-white {
+  background-color: var(--warm-white);
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding: 1rem;
+  }
+  
+  .mobile-text-center {
+    text-align: center;
+  }
+}
